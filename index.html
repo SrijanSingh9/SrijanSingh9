@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Srijan Singh | Portfolio</title>
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Custom properties for color theme */
+    :root {
+      --bg-color: #0a192f;         /* Deep Navy */
+      --primary-color: #64ffda;    /* Teal Accent */
+      --secondary-color: #ccd6f6;  /* Silver Accent */
+      --text-color: #e6f1ff;       /* Light text */
+      --muted-color: #8892b0;
+    }
+    body {
+      background: linear-gradient(135deg, var(--bg-color) 0%, #000000 100%);
+      color: var(--text-color);
+      font-family: 'Montserrat', sans-serif;
+    }
+    /* Quotation styling with fadeIn animation */
+    .quote {
+      opacity: 0;
+      animation: fadeInUp 1.5s forwards;
+    }
+    .quote::before {
+      content: "“";
+      font-size: 3rem;
+      color: var(--primary-color);
+      vertical-align: top;
+      margin-right: 0.25rem;
+    }
+    .quote::after {
+      content: "”";
+      font-size: 3rem;
+      color: var(--primary-color);
+      vertical-align: bottom;
+      margin-left: 0.25rem;
+    }
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* Navigation link underline effect */
+    .nav-link {
+      position: relative;
+      transition: color 0.3s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary-color);
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    /* Project card hover effects */
+    .card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 10px 20px rgba(100, 255, 218, 0.2);
+    }
+    /* Smooth scroll behavior */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+  <!-- Navigation -->
+  <nav class="px-6 py-4 flex justify-between items-center border-b border-gray-700">
+    <div class="text-2xl font-bold text-primary">Srijan Singh</div>
+    <ul class="flex space-x-6">
+      <li><a href="#about" class="nav-link hover:text-primary transition-colors">About</a></li>
+      <li><a href="#projects" class="nav-link hover:text-primary transition-colors">Projects</a></li>
+      <li><a href="#contact" class="nav-link hover:text-primary transition-colors">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section with Opening Quote -->
+  <header class="px-6 py-16 text-center">
+    <p class="quote text-2xl md:text-3xl italic max-w-3xl mx-auto">
+      Do not judge me by my successes, judge me by how many times I fell down and got back up again.
+    </p>
+    <p class="mt-4 text-muted text-lg">– Nelson Mandela</p>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="px-6 py-12">
+    <h2 class="text-3xl font-bold text-primary text-center mb-8">About Me</h2>
+    <div class="max-w-4xl mx-auto space-y-6">
+      <p>
+        I'm Srijan Singh, a passionate B.TECH CSE student graduating in 2026. I embrace the radiance of each new day, exploring every new technology and concept with a curious mind and a hint of philosophy. I believe in diving deep into ideas and creating practical solutions that light up the path to innovation.
+      </p>
+      <p>
+        Beyond the code, I find solace in Indian classical music and the serenity of travel—from the vibrant energy of Delhi to the peaceful valleys of Uttarakhand. Every journey fuels my creativity and shapes my perspective.
+      </p>
+      <p>
+        My GitHub repositories reflect a harmonious blend of technical expertise and creative expression. Projects like <strong>Virtual Herbal Garden</strong>, <strong>Teleprompter</strong>, and <strong>EdTech Buddy</strong> are not just tools, but narratives of resilience, exploration, and the art of learning.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="px-6 py-12 bg-gray-900 bg-opacity-50">
+    <h2 class="text-3xl font-bold text-primary text-center mb-8">Projects</h2>
+    <div class="max-w-4xl mx-auto grid gap-8 md:grid-cols-2">
+      <!-- Virtual Herbal Garden -->
+      <div class="card p-6 border border-gray-700 rounded-lg">
+        <h3 class="text-2xl font-semibold text-secondary mb-2">Virtual Herbal Garden</h3>
+        <p class="text-muted mb-4">
+          Immerse yourself in a digital garden where nature meets technology. Explore a curated collection of herbs and their healing properties, presented in an interactive, visually captivating space.
+        </p>
+        <a href="https://srijansingh9.github.io/virtual-herbal-garden/" target="_blank" class="text-primary hover:underline font-medium">
+          Visit Project &rarr;
+        </a>
+      </div>
+      <!-- Teleprompter -->
+      <div class="card p-6 border border-gray-700 rounded-lg">
+        <h3 class="text-2xl font-semibold text-secondary mb-2">Teleprompter</h3>
+        <p class="text-muted mb-4">
+          A refined, distraction-free teleprompter tailored for speakers and presenters. Experience seamless and confident delivery with a tool designed to keep your focus solely on the message.
+        </p>
+        <a href="https://srijansingh9.github.io/Teleprompter/" target="_blank" class="text-primary hover:underline font-medium">
+          Visit Project &rarr;
+        </a>
+      </div>
+      <!-- EdTech Buddy -->
+      <div class="card p-6 border border-gray-700 rounded-lg">
+        <h3 class="text-2xl font-semibold text-secondary mb-2">EdTech Buddy</h3>
+        <p class="text-muted mb-4">
+          A forward-thinking educational companion that helps students navigate diverse courses and career paths. Merging technology with creative insight, it’s a guide for academic and personal growth.
+        </p>
+        <a href="https://srijansingh9.github.io/EdTECH-Buddy/" target="_blank" class="text-primary hover:underline font-medium">
+          Visit Project &rarr;
+        </a>
+      </div>
+      <!-- Additional Projects Placeholder -->
+      <div class="card p-6 border border-gray-700 rounded-lg">
+        <h3 class="text-2xl font-semibold text-secondary mb-2">More Creations</h3>
+        <p class="text-muted mb-4">
+          My portfolio is ever-evolving—each project is a stepping stone towards new innovations in technology and creative exploration.
+        </p>
+        <a href="https://github.com/SrijanSingh9?tab=repositories" class="text-primary hover:underline font-medium">
+          Explore More &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Media Section -->
+  <section class="px-6 py-12">
+    <h2 class="text-3xl font-bold text-primary text-center mb-8">Connect With Me</h2>
+    <div class="max-w-3xl mx-auto grid gap-6 md:grid-cols-3 text-center">
+      <!-- GitHub -->
+      <a href="https://github.com/SrijanSingh9" target="_blank" class="flex flex-col items-center hover:text-primary transition-colors">
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="w-12 h-12 mb-2" />
+        <p class="text-secondary">GitHub</p>
+        <p class="text-sm text-muted mt-1">
+          Explore my repositories, where each line of code is a step toward innovation with a curosity of trying something new.
+        </p>
+      </a>
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/stellar0123456789/" target="_blank" class="flex flex-col items-center hover:text-primary transition-colors">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="w-12 h-12 mb-2" />
+        <p class="text-secondary">Instagram</p>
+        <p class="text-sm text-muted mt-1">
+          A visual diary of some experimental poetic creations, and serene explorations.
+        </p>
+      </a>
+      <!-- YouTube -->
+      <a href="https://www.youtube.com/@Stellar0-9" target="_blank" class="flex flex-col items-center hover:text-primary transition-colors">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" class="w-12 h-12 mb-2" />
+        <p class="text-secondary">YouTube</p>
+        <p class="text-sm text-muted mt-1">
+          Where creativity and curosity meets technology—dive into insightful poetic creations, learning random concepts and reflective narratives.
+        </p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="px-6 py-12 bg-gray-900 bg-opacity-50">
+    <h2 class="text-3xl font-bold text-primary text-center mb-8">Get In Touch</h2>
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="text-muted mb-4">
+        For professional inquiries, collaborations, or just a friendly hello, connect with me on LinkedIn.
+      </p>
+      <a href="https://www.linkedin.com/in/srijan-singh-559258255/" target="_blank" class="inline-block px-8 py-3 bg-primary text-bg rounded-full font-semibold hover:bg-opacity-80 transition-colors">
+        Connect on LinkedIn
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-auto px-6 py-6 border-t border-gray-700 text-center">
+    <p class="text-muted">&copy; <span id="year"></span> All rights reserved.</p>
+    <p class="text-secondary mt-2 italic text-sm">
+      "The only limit to our realization of tomorrow is our doubts of today." – Franklin D. Roosevelt
+    </p>
+  </footer>
+
+  <!-- JavaScript to update the current year automatically -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
