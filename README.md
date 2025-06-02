@@ -6,28 +6,40 @@ Hey there! I'm Srijan Singh, a passionate B.TECH CSE student graduating in 2026.
 
 I love diving deep into new technologies and exploring innovative concepts. Rote learning might not be my thing, but I'm all about getting hands-on, experimenting, and making ideas come alive. When I'm not coding, you might catch me jamming to Indian classical tunes or traveling to serene spots across India—from the buzz of Delhi to the peaceful valleys of Uttarakhand. 🎶✈️
 
-## Projects
+## 🚀 Projects That Spark Joy
 
-Here are a few projects which made me happy:
+A glimpse into some creations that brought me inspiration, learning, and joy along the way:
 
-- **Viscora: AI Daily Diary** 📃
-  AI-powered web application that revolutionizes daily reflection with generative AI insights. 
-  👉 [Visit Project](https://viscora-daily-diary.vercel.app/)
+---
 
-- **Virtual Herbal Garden** 🌿  
-  I tried to make An interactive digital garden using GLB files where nature and technology blend seamlessly. Explore a curated collection of herbs and discover their healing properties in a visually captivating space.  
-  👉 [Visit Project](https://srijansingh9.github.io/virtual-herbal-garden/)
+### 📃 **Viscora: AI Daily Diary**  
+A smart twist on journaling—Viscora is an AI-powered web app that turns your daily reflections into insightful, meaningful narratives using generative AI.  
+👉 [Explore Viscora](https://viscora-daily-diary.vercel.app/)
 
-- **Teleprompter** 🎤  
-  A sleek, distraction-free teleprompter designed only using HTML, css and js, for confident speakers. It helps you focus solely on your message, making every presentation a breeze.  
-  👉 [Visit Project](https://srijansingh9.github.io/Teleprompter/)
+---
 
-- **EdTech Buddy** 📚  
-  An innovative educational companion platform  that guides students through various courses and career paths with a touch of creative insight using botpress.  
-  👉 [Visit Project](https://srijansingh9.github.io/EdTECH-Buddy/)
+### 🌿 **Virtual Herbal Garden**  
+Where tech meets tranquility. I built an interactive 3D garden using GLB files, showcasing medicinal herbs and their healing properties. A peaceful space to explore nature through a digital lens.  
+👉 [Step into the Garden](https://srijansingh9.github.io/virtual-herbal-garden/)
 
-- **More Creations**  
-  My portfolio is ever-evolving—there's always something new on the horizon! Check out more projects on my [GitHub](https://github.com/SrijanSingh9?tab=repositories).
+---
+
+### 🎤 **Teleprompter**  
+Built with pure HTML, CSS, and JS, this clean and minimalist teleprompter keeps the spotlight on your words—not the distractions. Perfect for smooth, confident public speaking.  
+👉 [Try the Teleprompter](https://srijansingh9.github.io/Teleprompter/)
+
+---
+
+### 📚 **EdTech Buddy**  
+Your digital academic guide. Powered by Botpress, EdTech Buddy helps learners navigate courses, career paths, and educational content with intuitive, personalized support.  
+👉 [Meet Your Study Companion](https://srijansingh9.github.io/EdTECH-Buddy/)
+
+---
+
+### 🛠️ **More Creations Await**  
+My journey in building things never really stops. From passion projects to playful experiments, there’s always something new brewing.  
+🔍 [Browse More on GitHub](https://github.com/SrijanSingh9?tab=repositories)
+
 
 ## Connect With Me
 
