@@ -10,7 +10,7 @@ I love diving deep into new technologies and exploring innovative concepts. Rote
 
 Here are a few projects which made me happy:
 
-- **Viscora: AI Daily Diary** 📃 
+- **Viscora: AI Daily Diary** 📃
   AI-powered web application that revolutionizes daily reflection with generative AI insights. 
   👉 [Visit Project](https://viscora-daily-diary.vercel.app/)
 
