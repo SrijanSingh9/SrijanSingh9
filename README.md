@@ -1,6 +1,7 @@
 # Srijan Singh | Portfolio 🌟
 
 Hey there! I'm Srijan Singh, a passionate B.TECH CSE student graduating in 2026. Welcome to my little corner of the web—a creative space where tech meets philosophy and every new day is a fresh adventure! ✨
+[Hello from myside](https://srijansingh9.github.io/SrijanSingh9/)
 
 ## About Me
 
