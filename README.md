@@ -31,8 +31,8 @@ Built with pure HTML, CSS, and JS, this clean and minimalist teleprompter keeps 
 ---
 
 ### 📚 **EdTech Buddy**  
-Your digital academic guide. Powered by Botpress, EdTech Buddy helps learners navigate courses, career paths, and educational content with intuitive, personalized support.  
-👉 [Meet Your Study Companion](https://srijansingh9.github.io/EdTECH-Buddy/)
+Your digital academic guide. Powered by Botpress, EdTech Buddy helps learners navigate courses,and career paths, with support.  
+👉 [Meet Your Career Guide](https://srijansingh9.github.io/EdTECH-Buddy/)
 
 ---
 
