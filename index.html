@@ -1,225 +1,700 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Srijan Singh | Portfolio</title>
   <!-- Tailwind CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   <style>
-    /* Custom properties for color theme */
+    /* Custom Tailwind Config */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
     :root {
-      --bg-color: #0a192f;         /* Deep Navy */
-      --primary-color: #64ffda;    /* Teal Accent */
-      --secondary-color: #ccd6f6;  /* Silver Accent */
-      --text-color: #e6f1ff;       /* Light text */
-      --muted-color: #8892b0;
+      --bg-primary: #0a0a0f;
+      --bg-secondary: #1a1a2e;
+      --accent-cyan: #00d4ff;
+      --accent-purple: #8b5cf6;
+      --accent-pink: #ec4899;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
     }
+
     body {
-      background: linear-gradient(135deg, var(--bg-color) 0%, #000000 100%);
-      color: var(--text-color);
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, #0f0f23 100%);
+      color: var(--text-primary);
     }
-    /* Quotation styling with fadeIn animation */
-    .quote {
-      opacity: 0;
-      animation: fadeInUp 1.5s forwards;
+
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
     }
-    .quote::before {
-      content: "“";
-      font-size: 3rem;
-      color: var(--primary-color);
-      vertical-align: top;
-      margin-right: 0.25rem;
+
+    /* Gradient Text */
+    .gradient-text {
+      background: linear-gradient(45deg, var(--accent-cyan), var(--accent-purple), var(--accent-pink));
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientShift 3s ease-in-out infinite;
     }
-    .quote::after {
-      content: "”";
-      font-size: 3rem;
-      color: var(--primary-color);
-      vertical-align: bottom;
-      margin-left: 0.25rem;
-    }
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
+
+    @keyframes gradientShift {
+
+      0%,
       100% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+
+    /* Glass Effect */
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Floating Animation */
+    .float {
+      animation: floating 3s ease-in-out infinite;
+    }
+
+    @keyframes floating {
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* Glowing Button */
+    .glow-btn {
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .glow-btn:hover {
+      box-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
+      transform: translateY(-2px);
+    }
+
+    /* Parallax Stars */
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: twinkle 2s infinite;
+    }
+
+    @keyframes twinkle {
+
+      0%,
+      100% {
+        opacity: 0.3;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+    /* Scroll Indicator */
+    .scroll-indicator {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple), var(--accent-pink));
+      transform-origin: left;
+      z-index: 1000;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg-primary);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(45deg, var(--accent-cyan), var(--accent-purple));
+      border-radius: 4px;
+    }
+
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Quote Animation */
+    .quote-animate {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideInUp 1.5s ease-out forwards;
+    }
+
+    @keyframes slideInUp {
+      to {
         opacity: 1;
         transform: translateY(0);
       }
     }
-    /* Navigation link underline effect */
-    .nav-link {
+
+    /* Project Card Hover Effect */
+    .project-card {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
-      transition: color 0.3s;
+      overflow: hidden;
     }
-    .nav-link::after {
+
+    .project-card::before {
       content: '';
       position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+      transition: left 0.5s;
+    }
+
+    .project-card:hover::before {
+      left: 100%;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
+    }
+
+    /* Navigation Animations */
+    .nav-item {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-item::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
       left: 0;
-      bottom: -4px;
       width: 0;
       height: 2px;
-      background-color: var(--primary-color);
-      transition: width 0.3s;
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+      transition: width 0.3s ease;
     }
-    .nav-link:hover::after {
+
+    .nav-item:hover::after {
       width: 100%;
     }
-    /* Project card hover effects */
-    .card {
-      transition: transform 0.3s, box-shadow 0.3s;
+
+    /* Typing Animation */
+    .typing::after {
+      content: '|';
+      animation: blink 1s infinite;
     }
-    .card:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 10px 20px rgba(100, 255, 218, 0.2);
-    }
-    /* Smooth scroll behavior */
-    html {
-      scroll-behavior: smooth;
+
+    @keyframes blink {
+
+      0%,
+      50% {
+        opacity: 1;
+      }
+
+      51%,
+      100% {
+        opacity: 0;
+      }
     }
   </style>
 </head>
-<body class="antialiased flex flex-col min-h-screen">
+
+<body class="antialiased min-h-screen relative">
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-indicator" id="scrollIndicator"></div>
+
+  <!-- Animated Background Stars -->
+  <div class="stars" id="stars"></div>
+
   <!-- Navigation -->
-  <nav class="px-6 py-4 flex justify-between items-center border-b border-gray-700">
-    <div class="text-2xl font-bold text-primary">Srijan Singh</div>
-    <ul class="flex space-x-6">
-      <li><a href="#about" class="nav-link hover:text-primary transition-colors">About</a></li>
-      <li><a href="#projects" class="nav-link hover:text-primary transition-colors">Projects</a></li>
-      <li><a href="#contact" class="nav-link hover:text-primary transition-colors">Contact</a></li>
-    </ul>
+  <nav class="fixed top-0 w-full z-50 glass border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold gradient-text">
+        <span class="font-mono">Srijan Singh</span>
+      </div>
+      <ul class="hidden md:flex space-x-8">
+        <li><a href="#about" class="nav-item text-slate-300 hover:text-cyan-400 transition-colors font-medium">About</a>
+        </li>
+        <li><a href="#projects"
+            class="nav-item text-slate-300 hover:text-cyan-400 transition-colors font-medium">Projects</a></li>
+        <li><a href="#contact"
+            class="nav-item text-slate-300 hover:text-cyan-400 transition-colors font-medium">Contact</a></li>
+      </ul>
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-slate-300 hover:text-cyan-400" id="mobileMenuBtn">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden" id="mobileMenu">
+      <div class="px-6 py-4 space-y-4 border-t border-white/10">
+        <a href="#about" class="block text-slate-300 hover:text-cyan-400 transition-colors">About</a>
+        <a href="#projects" class="block text-slate-300 hover:text-cyan-400 transition-colors">Projects</a>
+        <a href="#contact" class="block text-slate-300 hover:text-cyan-400 transition-colors">Contact</a>
+      </div>
+    </div>
   </nav>
 
-  <!-- Hero Section with Opening Quote -->
-  <header class="px-6 py-16 text-center">
-    <p class="quote text-2xl md:text-3xl italic max-w-3xl mx-auto">
-      Do not judge me by my successes, judge me by how many times I fell down and got back up again.
-    </p>
-    <p class="mt-4 text-muted text-lg">– Nelson Mandela</p>
+  <!-- Hero Section -->
+  <header class="min-h-screen flex items-center justify-center px-6 pt-20">
+    <div class="text-center max-w-5xl">
+      <div class="mb-8">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 gradient-text">
+          Hello :)
+        </h1>
+
+        <p class="text-xl md:text-2xl text-slate-400 font-mono typing">
+          Building the future, one line of code at a time
+        </p>
+      </div>
+
+      <div class="quote-animate max-w-4xl mx-auto">
+        <blockquote class="text-2xl md:text-3xl italic text-slate-300 mb-6 leading-relaxed">
+          "Do not judge me by my successes, judge me by how many times I fell down and got back up again."
+        </blockquote>
+        <cite class="text-lg text-cyan-400 font-medium">— Nelson Mandela</cite>
+      </div>
+
+      <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#projects"
+          class="glow-btn bg-gradient-to-r from-cyan-500 to-purple-600 px-8 py-4 rounded-full font-semibold text-white hover:from-cyan-400 hover:to-purple-500 transition-all">
+          View My Work
+        </a>
+        <a href="#contact"
+          class="glass px-8 py-4 rounded-full font-semibold text-slate-300 hover:text-white transition-all border border-cyan-400/30 hover:border-cyan-400/60">
+          Get In Touch
+        </a>
+      </div>
+    </div>
   </header>
 
   <!-- About Section -->
-  <section id="about" class="px-6 py-12">
-    <h2 class="text-3xl font-bold text-primary text-center mb-8">About Me</h2>
-    <div class="max-w-4xl mx-auto space-y-6">
-      <p>
-        I'm Srijan Singh, a passionate B.TECH CSE student graduating in 2026. I embrace the radiance of each new day, exploring every new technology and concept with a curious mind and a hint of philosophy. I believe in diving deep into ideas and creating practical solutions that light up the path to innovation.
-      </p>
-      <p>
-        Beyond the code, I find solace in Indian classical music and the serenity of travel—from the vibrant energy of Delhi to the peaceful valleys of Uttarakhand. Every journey fuels my creativity and shapes my perspective.
-      </p>
-      <p>
-        My GitHub repositories reflect a harmonious blend of technical expertise and creative expression. Projects like <strong>Virtual Herbal Garden</strong>, <strong>Teleprompter</strong>, and <strong>EdTech Buddy</strong> are not just tools, but narratives of resilience, exploration, and the art of learning.
-      </p>
+  <section id="about" class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">
+        About Me
+      </h2>
+
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6 text-lg text-slate-300 leading-relaxed">
+          <p>
+            I'm a passionate <span class="text-cyan-400 font-semibold">B.TECH CSE student</span> graduating in 2026,
+            embracing each day with curiosity and a philosophical approach to technology. I believe in diving deep into
+            ideas and creating practical solutions that illuminate the path to innovation.
+          </p>
+          <p>
+            Beyond the code, I find inspiration in <span class="text-purple-400 font-semibold">Indian classical
+              music</span> and the serenity of travel—from Delhi's vibrant energy to Uttarakhand's peaceful valleys.
+            Every journey fuels my creativity and shapes my perspective.
+          </p>
+          <p>
+            My projects reflect a harmonious blend of technical expertise and creative expression, each one a narrative
+            of resilience, exploration, and the art of learning.
+          </p>
+        </div>
+
+        <div class="relative">
+          <div class="glass p-8 rounded-2xl float">
+            <div class="space-y-6">
+              <!-- Digital Alchemist -->
+              <div class="flex items-center space-x-4">
+                <div
+                  class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                  <i data-lucide="code" class="w-6 h-6 text-white"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Digital Alchemist</h3>
+                  <p class="text-slate-400 text-sm">Crafting systems from imagination and syntax</p>
+                </div>
+              </div>
+              <!-- Machine Whisperer -->
+              <div class="flex items-center space-x-4">
+                <div
+                  class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
+                  <i data-lucide="brain" class="w-6 h-6 text-white"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Machine Whisperer</h3>
+                  <p class="text-slate-400 text-sm">Training algorithms to think, learn & evolve</p>
+                </div>
+              </div>
+              <!-- Interface Poet -->
+              <div class="flex items-center space-x-4">
+                <div
+                  class="w-12 h-12 bg-gradient-to-r from-pink-500 to-cyan-600 rounded-lg flex items-center justify-center">
+                  <i data-lucide="palette" class="w-6 h-6 text-white"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-white">Interface Poet</h3>
+                  <p class="text-slate-400 text-sm">Designing emotion through pixels & motion</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="px-6 py-12 bg-gray-900 bg-opacity-50">
-    <h2 class="text-3xl font-bold text-primary text-center mb-8">Projects</h2>
-    <div class="max-w-4xl mx-auto grid gap-8 md:grid-cols-2">
-      <!-- Virtual Herbal Garden -->
-      <div class="card p-6 border border-gray-700 rounded-lg">
-        <h3 class="text-2xl font-semibold text-secondary mb-2">Virtual Herbal Garden</h3>
-        <p class="text-muted mb-4">
-          Immerse yourself in a digital garden where nature meets technology. Explore a curated collection of herbs and their healing properties, presented in an interactive, visually captivating space.
-        </p>
-        <a href="https://srijansingh9.github.io/virtual-herbal-garden/" target="_blank" class="text-primary hover:underline font-medium">
-          Visit Project &rarr;
-        </a>
-      </div>
-      <!-- Teleprompter -->
-      <div class="card p-6 border border-gray-700 rounded-lg">
-        <h3 class="text-2xl font-semibold text-secondary mb-2">Teleprompter</h3>
-        <p class="text-muted mb-4">
-          A refined, distraction-free teleprompter tailored for speakers and presenters. Experience seamless and confident delivery with a tool designed to keep your focus solely on the message.
-        </p>
-        <a href="https://srijansingh9.github.io/Teleprompter/" target="_blank" class="text-primary hover:underline font-medium">
-          Visit Project &rarr;
-        </a>
-      </div>
-      <!-- EdTech Buddy -->
-      <div class="card p-6 border border-gray-700 rounded-lg">
-        <h3 class="text-2xl font-semibold text-secondary mb-2">EdTech Buddy</h3>
-        <p class="text-muted mb-4">
-          A forward-thinking educational companion that helps students navigate diverse courses and career paths. Merging technology with creative insight, it’s a guide for academic and personal growth.
-        </p>
-        <a href="https://srijansingh9.github.io/EdTECH-Buddy/" target="_blank" class="text-primary hover:underline font-medium">
-          Visit Project &rarr;
-        </a>
-      </div>
-      <!-- Additional Projects Placeholder -->
-      <div class="card p-6 border border-gray-700 rounded-lg">
-        <h3 class="text-2xl font-semibold text-secondary mb-2">More Creations</h3>
-        <p class="text-muted mb-4">
-          My portfolio is ever-evolving—each project is a stepping stone towards new innovations in technology and creative exploration.
-        </p>
-        <a href="https://github.com/SrijanSingh9?tab=repositories" class="text-primary hover:underline font-medium">
-          Explore More &rarr;
-        </a>
+  <section id="projects" class="py-20 px-6 bg-gradient-to-b from-transparent to-slate-900/20">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">
+        Featured Projects
+      </h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Viscora Project -->
+        <div class="project-card glass p-8 rounded-2xl">
+          <div class="mb-6">
+            <div
+              class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+              <i data-lucide="brain" class="w-8 h-8 text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Viscora: AI Daily Diary</h3>
+            <p class="text-slate-400 leading-relaxed">
+              AI-powered web application that revolutionizes daily reflection with generative AI insights and
+              personalized suggestions.
+            </p>
+          </div>
+          <div class="flex items-center justify-between">
+            <div class="flex space-x-2">
+              <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">AI</span>
+              <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Web</span>
+            </div>
+            <a href="https://viscora-daily-diary.vercel.app/" target="_blank"
+              class="text-cyan-400 hover:text-cyan-300 transition-colors">
+              <i data-lucide="external-link" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Virtual Herbal Garden -->
+        <div class="project-card glass p-8 rounded-2xl">
+          <div class="mb-6">
+            <div
+              class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-4">
+              <i data-lucide="leaf" class="w-8 h-8 text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Virtual Herbal Garden</h3>
+            <p class="text-slate-400 leading-relaxed">
+              Interactive digital garden exploring herbs and their healing properties in a visually captivating space.
+            </p>
+          </div>
+          <div class="flex items-center justify-between">
+            <div class="flex space-x-2">
+              <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Nature</span>
+              <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-sm">Interactive</span>
+            </div>
+            <a href="https://srijansingh9.github.io/virtual-herbal-garden/" target="_blank"
+              class="text-cyan-400 hover:text-cyan-300 transition-colors">
+              <i data-lucide="external-link" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Teleprompter -->
+        <div class="project-card glass p-8 rounded-2xl">
+          <div class="mb-6">
+            <div
+              class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-4">
+              <i data-lucide="mic" class="w-8 h-8 text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">Teleprompter</h3>
+            <p class="text-slate-400 leading-relaxed">
+              Refined, distraction-free teleprompter for speakers and presenters with seamless delivery experience.
+            </p>
+          </div>
+          <div class="flex items-center justify-between">
+            <div class="flex space-x-2">
+              <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">Tool</span>
+              <span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm">Utility</span>
+            </div>
+            <a href="https://srijansingh9.github.io/Teleprompter/" target="_blank"
+              class="text-cyan-400 hover:text-cyan-300 transition-colors">
+              <i data-lucide="external-link" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- EdTech Buddy -->
+        <div class="project-card glass p-8 rounded-2xl">
+          <div class="mb-6">
+            <div
+              class="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mb-4">
+              <i data-lucide="graduation-cap" class="w-8 h-8 text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">EdTech Buddy</h3>
+            <p class="text-slate-400 leading-relaxed">
+              Educational companion helping students navigate courses and career paths with technology and creative
+              insight.
+            </p>
+          </div>
+          <div class="flex items-center justify-between">
+            <div class="flex space-x-2">
+              <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Education</span>
+              <span class="px-3 py-1 bg-indigo-500/20 text-indigo-400 rounded-full text-sm">Career</span>
+            </div>
+            <a href="https://srijansingh9.github.io/EdTECH-Buddy/" target="_blank"
+              class="text-cyan-400 hover:text-cyan-300 transition-colors">
+              <i data-lucide="external-link" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- More Projects Card -->
+        <div class="project-card glass p-8 rounded-2xl md:col-span-2 lg:col-span-1">
+          <div class="mb-6">
+            <div
+              class="w-16 h-16 bg-gradient-to-r from-pink-500 to-violet-600 rounded-xl flex items-center justify-center mb-4">
+              <i data-lucide="folder" class="w-8 h-8 text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-3">More Creations</h3>
+            <p class="text-slate-400 leading-relaxed">
+              Explore my complete portfolio of innovations and creative explorations in technology.
+            </p>
+          </div>
+          <div class="flex items-center justify-between">
+            <div class="flex space-x-2">
+              <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm">Portfolio</span>
+              <span class="px-3 py-1 bg-violet-500/20 text-violet-400 rounded-full text-sm">Open Source</span>
+            </div>
+            <a href="https://github.com/SrijanSingh9?tab=repositories" target="_blank"
+              class="text-cyan-400 hover:text-cyan-300 transition-colors">
+              <i data-lucide="external-link" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Social Media Section -->
-  <section class="px-6 py-12">
-    <h2 class="text-3xl font-bold text-primary text-center mb-8">Connect With Me</h2>
-    <div class="max-w-3xl mx-auto grid gap-6 md:grid-cols-3 text-center">
-      <!-- GitHub -->
-      <a href="https://github.com/SrijanSingh9" target="_blank" class="flex flex-col items-center hover:text-primary transition-colors">
-        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="w-12 h-12 mb-2" />
-        <p class="text-secondary">GitHub</p>
-        <p class="text-sm text-muted mt-1">
-          Explore my repositories, where each line of code is a step toward innovation with a curosity of trying something new.
-        </p>
-      </a>
-      <!-- Instagram -->
-      <a href="https://www.instagram.com/stellar0123456789/" target="_blank" class="flex flex-col items-center hover:text-primary transition-colors">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="w-12 h-12 mb-2" />
-        <p class="text-secondary">Instagram</p>
-        <p class="text-sm text-muted mt-1">
-          A visual diary of some experimental poetic creations, and serene explorations.
-        </p>
-      </a>
-      <!-- YouTube -->
-      <a href="https://www.youtube.com/@Stellar0-9" target="_blank" class="flex flex-col items-center hover:text-primary transition-colors">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" class="w-12 h-12 mb-2" />
-        <p class="text-secondary">YouTube</p>
-        <p class="text-sm text-muted mt-1">
-          Where creativity and curosity meets technology—dive into insightful poetic creations, learning random concepts and reflective narratives.
-        </p>
-      </a>
+  <section class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">
+        Let's Connect
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- GitHub -->
+        <a href="https://github.com/SrijanSingh9" target="_blank"
+          class="glass p-8 rounded-2xl hover:scale-105 transition-all group">
+          <div class="text-center">
+            <div
+              class="w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-900 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+              <i data-lucide="github" class="w-10 h-10 text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">GitHub</h3>
+            <p class="text-slate-400 leading-relaxed">
+              Explore repositories where each line of code represents innovation and curiosity-driven development.
+            </p>
+          </div>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/stellar0123456789/" target="_blank"
+          class="glass p-8 rounded-2xl hover:scale-105 transition-all group">
+          <div class="text-center">
+            <div
+              class="w-20 h-20 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+              <i data-lucide="instagram" class="w-10 h-10 text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">Instagram</h3>
+            <p class="text-slate-400 leading-relaxed">
+              Visual diary of experimental poetic creations and serene explorations through life's journey.
+            </p>
+          </div>
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/@Stellar0-9" target="_blank"
+          class="glass p-8 rounded-2xl hover:scale-105 transition-all group">
+          <div class="text-center">
+            <div
+              class="w-20 h-20 bg-gradient-to-r from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+              <i data-lucide="youtube" class="w-10 h-10 text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">YouTube</h3>
+            <p class="text-slate-400 leading-relaxed">
+              Where creativity meets technology—dive into poetic creations, learning concepts, and reflective
+              narratives.
+            </p>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="px-6 py-12 bg-gray-900 bg-opacity-50">
-    <h2 class="text-3xl font-bold text-primary text-center mb-8">Get In Touch</h2>
-    <div class="max-w-2xl mx-auto text-center">
-      <p class="text-muted mb-4">
-        For professional inquiries, collaborations, or just a friendly hello, connect with me on LinkedIn.
+  <section id="contact" class="py-20 px-6 bg-gradient-to-b from-transparent to-slate-900/20">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-8 gradient-text">
+        Ready to Collaborate?
+      </h2>
+      <p class="text-xl text-slate-400 mb-12 leading-relaxed">
+        Whether it's a professional opportunity, creative collaboration, or just a friendly conversation about
+        technology and innovation, I'd love to connect.
       </p>
-      <a href="https://www.linkedin.com/in/srijan-singh-559258255/" target="_blank" class="inline-block px-8 py-3 bg-primary text-bg rounded-full font-semibold hover:bg-opacity-80 transition-colors">
-        Connect on LinkedIn
-      </a>
+
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href="https://www.linkedin.com/in/srijan-singh-559258255/" target="_blank"
+          class="glow-btn bg-gradient-to-r from-cyan-500 to-purple-600 px-8 py-4 rounded-full font-semibold text-white hover:from-cyan-400 hover:to-purple-500 transition-all inline-flex items-center justify-center space-x-2">
+          <i data-lucide="linkedin" class="w-5 h-5"></i>
+          <span>Connect on LinkedIn</span>
+        </a>
+        <a href="mailto:stellar0123456789@gmail.com"
+          class="glass px-8 py-4 rounded-full font-semibold text-slate-300 hover:text-white transition-all border border-cyan-400/30 hover:border-cyan-400/60 inline-flex items-center justify-center space-x-2">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+          <span>Send an Email</span>
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="mt-auto px-6 py-6 border-t border-gray-700 text-center">
-    <p class="text-muted">&copy; <span id="year"></span> All rights reserved.</p>
-    <p class="text-secondary mt-2 italic text-sm">
-      "The only limit to our realization of tomorrow is our doubts of today." – Franklin D. Roosevelt
-    </p>
+  <footer class="py-12 px-6 border-t border-white/10">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center">
+        <div class="mb-6">
+          <div class="text-2xl font-bold gradient-text font-mono">
+            &lt;Srijan Singh/&gt;
+          </div>
+        </div>
+        <p class="text-slate-400 mb-4">
+          &copy; <span id="year"></span> Srijan Singh. All rights reserved.
+        </p>
+        <blockquote class="text-slate-300 italic max-w-2xl mx-auto">
+          "The only limit to our realization of tomorrow is our doubts of today."
+          <cite class="block text-cyan-400 mt-2 not-italic">— Franklin D. Roosevelt</cite>
+        </blockquote>
+      </div>
+    </div>
   </footer>
 
-  <!-- JavaScript to update the current year automatically -->
   <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Update year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll progress indicator
+    window.addEventListener('scroll', () => {
+      const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      document.getElementById('scrollIndicator').style.transform = `scaleX(${scrolled / 100})`;
+    });
+
+    // Create animated stars
+    function createStars() {
+      const starsContainer = document.getElementById('stars');
+      const numStars = 50;
+
+      for (let i = 0; i < numStars; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.left = Math.random() * 100 + '%';
+        star.style.top = Math.random() * 100 + '%';
+        star.style.width = Math.random() * 3 + 1 + 'px';
+        star.style.height = star.style.width;
+        star.style.animationDelay = Math.random() * 2 + 's';
+        starsContainer.appendChild(star);
+      }
+    }
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+        // Close mobile menu if open
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Initialize on load
+    window.addEventListener('load', () => {
+      createStars();
+    });
+
+    // Add scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.quote-animate').forEach(el => {
+      observer.observe(el);
+    });
   </script>
 </body>
+
 </html>
