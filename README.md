@@ -15,7 +15,7 @@ A glimpse into some creations that brought me inspiration, learning, and joy alo
 
 ### 📃 **Viscora: AI Daily Diary**  
 A smart twist on journaling—Viscora is an AI-powered web app that turns your daily reflections into insightful, meaningful narratives using generative AI.  
-👉 [Explore Viscora](https://viscora-daily-diary.vercel.app/)
+👉 [Explore Viscora Nexus](https://viscora-nexus.vercel.app/)
 
 ---
 
