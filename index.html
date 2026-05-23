@@ -12,7 +12,7 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet">
   <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     /* Custom Tailwind Config */
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
@@ -32,6 +32,7 @@
       font-family: 'Inter', sans-serif;
       background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, #0f0f23 100%);
       color: var(--text-primary);
+      overflow-x: hidden;
     }
 
     .font-mono {
@@ -258,7 +259,7 @@
     </div>
     <!-- Mobile Menu -->
     <div class="md:hidden hidden" id="mobileMenu">
-      <div class="px-6 py-4 space-y-4 border-t border-white/10">
+      <div class="px-6 py-4 space-y-4 border-t border-white/10 glass rounded-b-2xl">
         <a href="#about" class="block text-slate-300 hover:text-cyan-400 transition-colors">About</a>
         <a href="#projects" class="block text-slate-300 hover:text-cyan-400 transition-colors">Projects</a>
         <a href="#contact" class="block text-slate-300 hover:text-cyan-400 transition-colors">Contact</a>
@@ -308,7 +309,7 @@
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div class="space-y-6 text-lg text-slate-300 leading-relaxed">
           <p>
-            I am a <span class="text-cyan-400 font-semibold">Computer Science undergraduate</span> at GNDEC, Ludhiana (Class of 2026). My work exists at the intersection of robust full-stack engineering—specializing in the Django-React-PostgreSQL ecosystem—and the nuanced realm of artificial intelligence ethics.
+            I am a <span class="text-cyan-400 font-semibold">soon-to-be Computer Science graduate</span> from GNDEC, Ludhiana, currently bridging the gap between academia and the tech industry. My work exists at the intersection of robust full-stack engineering—specializing in the Django-React-PostgreSQL ecosystem—and the nuanced realm of artificial intelligence ethics.
           </p>
           <p>
             I am deeply fascinated by the "black-box" problem in algorithmic governance and strive to build systems rooted in transparency, adhering strictly to <span class="text-purple-400 font-semibold">Human-Computer Interaction (HCI)</span> principles to ensure technology remains intuitive and accessible.
@@ -382,7 +383,7 @@
               <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">PWA</span>
               <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Productivity</span>
             </div>
-            <a href="https://viscora-nexus.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 transition-colors">
+            <a href="https://viscora-nexus.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 transition-colors" aria-label="Visit Viscora Nexus">
               <i data-lucide="external-link" class="w-5 h-5"></i>
             </a>
           </div>
@@ -404,7 +405,7 @@
               <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Full-Stack</span>
               <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-sm">Data</span>
             </div>
-            <a href="https://srijansingh9.github.io/Project-MatSelect-Timeline/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 transition-colors">
+            <a href="https://srijansingh9.github.io/Project-MatSelect-Timeline/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 transition-colors" aria-label="Visit MatSelect">
               <i data-lucide="external-link" class="w-5 h-5"></i>
             </a>
           </div>
@@ -426,7 +427,7 @@
               <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">Concept</span>
               <span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm">Research</span>
             </div>
-            <a href="https://srijansingh9.github.io/13Safar/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 transition-colors">
+            <a href="https://srijansingh9.github.io/13Safar/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 transition-colors" aria-label="Visit 13Safar">
               <i data-lucide="external-link" class="w-5 h-5"></i>
             </a>
           </div>
@@ -448,7 +449,7 @@
               <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Education</span>
               <span class="px-3 py-1 bg-indigo-500/20 text-indigo-400 rounded-full text-sm">Career</span>
             </div>
-            <a href="https://srijansingh9.github.io/EdTECH-Buddy/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 transition-colors">
+            <a href="https://srijansingh9.github.io/EdTECH-Buddy/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 transition-colors" aria-label="Visit EdTech Buddy">
               <i data-lucide="external-link" class="w-5 h-5"></i>
             </a>
           </div>
@@ -470,7 +471,7 @@
               <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm">Repositories</span>
               <span class="px-3 py-1 bg-violet-500/20 text-violet-400 rounded-full text-sm">Open Source</span>
             </div>
-            <a href="https://github.com/SrijanSingh9?tab=repositories" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 transition-colors">
+            <a href="https://github.com/SrijanSingh9?tab=repositories" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 transition-colors" aria-label="Visit GitHub Repositories">
               <i data-lucide="external-link" class="w-5 h-5"></i>
             </a>
           </div>
@@ -488,7 +489,7 @@
 
       <div class="grid md:grid-cols-3 gap-8">
         <!-- GitHub -->
-        <a href="https://github.com/SrijanSingh9" target="_blank" rel="noopener noreferrer" class="glass p-8 rounded-2xl hover:scale-105 transition-all group">
+        <a href="https://github.com/SrijanSingh9" target="_blank" rel="noopener noreferrer" class="glass p-8 rounded-2xl hover:scale-105 transition-all group block">
           <div class="text-center">
             <div class="w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-900 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
               <i data-lucide="github" class="w-10 h-10 text-white"></i>
@@ -501,7 +502,7 @@
         </a>
 
         <!-- Instagram -->
-        <a href="https://www.instagram.com/stellar0123456789/" target="_blank" rel="noopener noreferrer" class="glass p-8 rounded-2xl hover:scale-105 transition-all group">
+        <a href="https://www.instagram.com/stellar0123456789/" target="_blank" rel="noopener noreferrer" class="glass p-8 rounded-2xl hover:scale-105 transition-all group block">
           <div class="text-center">
             <div class="w-20 h-20 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
               <i data-lucide="instagram" class="w-10 h-10 text-white"></i>
@@ -514,7 +515,7 @@
         </a>
 
         <!-- YouTube -->
-        <a href="https://www.youtube.com/@Stellar0-9" target="_blank" rel="noopener noreferrer" class="glass p-8 rounded-2xl hover:scale-105 transition-all group">
+        <a href="https://www.youtube.com/@Stellar0-9" target="_blank" rel="noopener noreferrer" class="glass p-8 rounded-2xl hover:scale-105 transition-all group block">
           <div class="text-center">
             <div class="w-20 h-20 bg-gradient-to-r from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
               <i data-lucide="youtube" class="w-10 h-10 text-white"></i>
@@ -575,24 +576,27 @@
   </footer>
 
   <script>
-    // Robustly initialize Lucide icons after the DOM is fully loaded
+    // Robustly initialize Lucide icons when the DOM is fully loaded
     document.addEventListener("DOMContentLoaded", () => {
       lucide.createIcons();
+      
+      // Update year dynamically
+      document.getElementById('year').textContent = new Date().getFullYear();
     });
-
-    // Update year dynamically
-    document.getElementById('year').textContent = new Date().getFullYear();
 
     // Scroll progress indicator
     window.addEventListener('scroll', () => {
       const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      document.getElementById('scrollIndicator').style.transform = `scaleX(${scrolled / 100})`;
+      const scrollIndicator = document.getElementById('scrollIndicator');
+      if (scrollIndicator) {
+        scrollIndicator.style.transform = `scaleX(${scrolled / 100})`;
+      }
     });
 
     // Create animated stars
     function createStars() {
       const starsContainer = document.getElementById('stars');
-      if(!starsContainer) return;
+      if (!starsContainer) return;
       const numStars = 50;
 
       for (let i = 0; i < numStars; i++) {
@@ -611,7 +615,7 @@
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
 
-    if(mobileMenuBtn && mobileMenu) {
+    if (mobileMenuBtn && mobileMenu) {
       mobileMenuBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
       });
@@ -629,7 +633,7 @@
           });
         }
         // Close mobile menu if open
-        if(mobileMenu && !mobileMenu.classList.contains('hidden')) {
+        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
           mobileMenu.classList.add('hidden');
         }
       });
