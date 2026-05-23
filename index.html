@@ -300,59 +300,93 @@
     </div>
   </header>
 
-  <!-- About Section -->
-  <section id="about" class="py-20 px-6">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">
-        About Me
-      </h2>
+  <!-- Origin Sequence / About Section -->
+  <section id="about" class="relative py-20 px-6 overflow-hidden">
+    <!-- Optional: Subtle futuristic background grid/glow elements could go here -->
+    
+    <div class="max-w-6xl mx-auto relative z-10">
+      
+      <!-- Futuristic Header -->
+      <div class="text-center mb-16">
+        <span class="font-mono text-cyan-500 text-sm tracking-[0.2em] uppercase mb-2 block">
+          >> Initialize_Profile_Sequence
+        </span>
+        <h2 class="text-4xl md:text-5xl font-bold gradient-text drop-shadow-[0_0_15px_rgba(34,211,238,0.3)]">
+          System Architecture
+        </h2>
+      </div>
 
       <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="space-y-6 text-lg text-slate-300 leading-relaxed">
+        <!-- Narrative Text -->
+        <div class="space-y-6 text-lg text-slate-300 leading-relaxed relative">
+          
+          <!-- Decorative HUD line -->
+          <div class="absolute -left-6 top-0 bottom-0 w-px bg-gradient-to-b from-cyan-500/50 via-purple-500/20 to-transparent hidden lg:block"></div>
+
           <p>
-            I am a <span class="text-cyan-400 font-semibold">soon-to-be Computer Science graduate</span> from GNDEC, Ludhiana, currently bridging the gap between academia and the tech industry. My work exists at the intersection of robust full-stack engineering—specializing in the Django-React-PostgreSQL ecosystem—and the nuanced realm of artificial intelligence ethics.
+            I am approaching my final compile-time as a <span class="text-cyan-400 font-semibold drop-shadow-[0_0_8px_rgba(34,211,238,0.4)]">Computer Science graduate</span> from GNDEC, Ludhiana, building data-bridges between academic theory and the tech frontier. My core runtime exists at the intersection of robust full-stack engineering—forging architectures within the Django-React-PostgreSQL nexus—and the nuanced, critical realm of artificial intelligence ethics.
           </p>
           <p>
-            I am deeply fascinated by the "black-box" problem in algorithmic governance and strive to build systems rooted in transparency, adhering strictly to <span class="text-purple-400 font-semibold">Human-Computer Interaction (HCI)</span> principles to ensure technology remains intuitive and accessible.
+            I am deeply invested in illuminating the <span class="text-purple-400 font-semibold">"black-box" anomaly</span> in algorithmic governance. I strive to architect systems rooted in absolute transparency, deploying Human-Computer Interaction (HCI) protocols to ensure our digital ecosystems remain intuitively tethered to human cognition and accessibility.
           </p>
           <p>
-            Beyond algorithms and architecture, my perspective is shaped by a profound appreciation for classic, melancholic poetry and Indian classical music. Whether drafting a research paper on automated fairness or exploring the serene valleys of Uttarakhand, I seek to harmonize technical precision with genuine human expression.
+            Beyond servers and syntaxes, my neural weights are shaped by analog signals: the melancholic cadence of classic poetry and the intricate microtones of Indian classical music. Whether drafting research on automated fairness or seeking recalibration in the serene valleys of Uttarakhand, my ultimate protocol is to harmonize high-fidelity engineering with genuine human resonance.
           </p>
         </div>
 
+        <!-- HUD / Tech Cards -->
         <div class="relative">
-          <div class="glass p-8 rounded-2xl float">
-            <div class="space-y-6">
-              <!-- Full-Stack Developer -->
-              <div class="flex items-center space-x-4">
-                <div class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                  <i data-lucide="code" class="w-6 h-6 text-white"></i>
+          <!-- Glass container with a futuristic border/glow -->
+          <div class="glass p-8 rounded-2xl float border border-slate-700/50 shadow-[0_0_30px_rgba(139,92,246,0.1)] relative overflow-hidden">
+            
+            <!-- Decorative scanline/corner accents -->
+            <div class="absolute top-0 left-0 w-8 h-px bg-cyan-500/70"></div>
+            <div class="absolute top-0 left-0 w-px h-8 bg-cyan-500/70"></div>
+            
+            <div class="space-y-8 relative z-10">
+              
+              <!-- Module 01: Full-Stack -->
+              <div class="flex items-start space-x-5 group">
+                <div class="w-14 h-14 mt-1 bg-gradient-to-br from-cyan-900/50 to-blue-900/50 border border-cyan-500/30 rounded-xl flex items-center justify-center group-hover:shadow-[0_0_15px_rgba(34,211,238,0.4)] transition-all duration-300">
+                  <i data-lucide="code" class="w-6 h-6 text-cyan-400"></i>
                 </div>
                 <div>
-                  <h3 class="font-semibold text-white">Full-Stack Architect</h3>
-                  <p class="text-slate-400 text-sm">Orchestrating scalable Django - React and other ecosystems</p>
+                  <div class="flex items-center space-x-2 mb-1">
+                    <span class="font-mono text-xs text-cyan-500">[SYS.01]</span>
+                    <h3 class="font-semibold text-slate-100 tracking-wide">Full-Stack Architect</h3>
+                  </div>
+                  <p class="text-slate-400 text-sm leading-relaxed">Orchestrating scalable, high-performance logic across the Django-React continuum.</p>
                 </div>
               </div>
-              <!-- AI Ethics -->
-              <div class="flex items-center space-x-4">
-                <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
-                  <i data-lucide="brain" class="w-6 h-6 text-white"></i>
+
+              <!-- Module 02: AI Ethics -->
+              <div class="flex items-start space-x-5 group">
+                <div class="w-14 h-14 mt-1 bg-gradient-to-br from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-xl flex items-center justify-center group-hover:shadow-[0_0_15px_rgba(168,85,247,0.4)] transition-all duration-300">
+                  <i data-lucide="brain-circuit" class="w-6 h-6 text-purple-400"></i> <!-- Swapped 'brain' for 'brain-circuit' if using latest Lucide -->
                 </div>
                 <div>
-                  <h3 class="font-semibold text-white">Like to explore AI Ethics as a hobby</h3>
-                  <p class="text-slate-400 text-sm">Investigating algorithmic fairness & the black-box problem</p>
+                  <div class="flex items-center space-x-2 mb-1">
+                    <span class="font-mono text-xs text-purple-500">[SYS.02]</span>
+                    <h3 class="font-semibold text-slate-100 tracking-wide">AI Ethics Explorer</h3>
+                  </div>
+                  <p class="text-slate-400 text-sm leading-relaxed">Investigating algorithmic telemetry, fairness guardrails, and decoding the black-box.</p>
                 </div>
               </div>
-              <!-- HCI -->
-              <div class="flex items-center space-x-4">
-                <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-cyan-600 rounded-lg flex items-center justify-center">
-                  <i data-lucide="layout" class="w-6 h-6 text-white"></i>
+
+              <!-- Module 03: HCI -->
+              <div class="flex items-start space-x-5 group">
+                <div class="w-14 h-14 mt-1 bg-gradient-to-br from-pink-900/50 to-cyan-900/50 border border-pink-500/30 rounded-xl flex items-center justify-center group-hover:shadow-[0_0_15px_rgba(236,72,153,0.4)] transition-all duration-300">
+                  <i data-lucide="cpu" class="w-6 h-6 text-pink-400"></i> <!-- Swapped 'layout' for 'cpu' or 'monitor' to fit the vibe -->
                 </div>
                 <div>
-                  <h3 class="font-semibold text-white">Loves to design creative things</h3>
-                  <p class="text-slate-400 text-sm">Designing futuristic, user-centric digital experiences</p>
+                  <div class="flex items-center space-x-2 mb-1">
+                    <span class="font-mono text-xs text-pink-500">[SYS.03]</span>
+                    <h3 class="font-semibold text-slate-100 tracking-wide">Creative Synthesizer</h3>
+                  </div>
+                  <p class="text-slate-400 text-sm leading-relaxed">Engineering intuitive, user-centric cybernetic interfaces and futuristic digital experiences.</p>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -360,7 +394,6 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
   <section id="projects" class="py-20 px-6 bg-gradient-to-b from-transparent to-slate-900/20">
     <div class="max-w-7xl mx-auto">
       <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">
