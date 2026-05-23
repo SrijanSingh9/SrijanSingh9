@@ -49,12 +49,10 @@
     }
 
     @keyframes gradientShift {
-
       0%,
       100% {
         background-position: 0% 50%;
       }
-
       50% {
         background-position: 100% 50%;
       }
@@ -74,12 +72,10 @@
     }
 
     @keyframes floating {
-
       0%,
       100% {
         transform: translateY(0px);
       }
-
       50% {
         transform: translateY(-10px);
       }
@@ -116,12 +112,10 @@
     }
 
     @keyframes twinkle {
-
       0%,
       100% {
         opacity: 0.3;
       }
-
       50% {
         opacity: 1;
       }
@@ -227,12 +221,10 @@
     }
 
     @keyframes blink {
-
       0%,
       50% {
         opacity: 1;
       }
-
       51%,
       100% {
         opacity: 0;
@@ -255,15 +247,12 @@
         <span class="font-mono">Srijan Singh</span>
       </div>
       <ul class="hidden md:flex space-x-8">
-        <li><a href="#about" class="nav-item text-slate-300 hover:text-cyan-400 transition-colors font-medium">About</a>
-        </li>
-        <li><a href="#projects"
-            class="nav-item text-slate-300 hover:text-cyan-400 transition-colors font-medium">Projects</a></li>
-        <li><a href="#contact"
-            class="nav-item text-slate-300 hover:text-cyan-400 transition-colors font-medium">Contact</a></li>
+        <li><a href="#about" class="nav-item text-slate-300 hover:text-cyan-400 transition-colors font-medium">About</a></li>
+        <li><a href="#projects" class="nav-item text-slate-300 hover:text-cyan-400 transition-colors font-medium">Projects</a></li>
+        <li><a href="#contact" class="nav-item text-slate-300 hover:text-cyan-400 transition-colors font-medium">Contact</a></li>
       </ul>
       <!-- Mobile Menu Button -->
-      <button class="md:hidden text-slate-300 hover:text-cyan-400" id="mobileMenuBtn">
+      <button class="md:hidden text-slate-300 hover:text-cyan-400" id="mobileMenuBtn" aria-label="Toggle Menu">
         <i data-lucide="menu" class="w-6 h-6"></i>
       </button>
     </div>
@@ -284,7 +273,6 @@
         <h1 class="text-5xl md:text-7xl font-bold mb-6 gradient-text">
           Hello :)
         </h1>
-
         <p class="text-xl md:text-2xl text-slate-400 font-mono typing">
           Bridging Full-Stack Engineering, AI Ethics & Human-Centric Design
         </p>
@@ -335,8 +323,7 @@
             <div class="space-y-6">
               <!-- Full-Stack Developer -->
               <div class="flex items-center space-x-4">
-                <div
-                  class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <div class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
                   <i data-lucide="code" class="w-6 h-6 text-white"></i>
                 </div>
                 <div>
@@ -344,10 +331,9 @@
                   <p class="text-slate-400 text-sm">Orchestrating scalable Django & React ecosystems</p>
                 </div>
               </div>
-              <!-- Machine Whisperer -->
+              <!-- AI Ethics -->
               <div class="flex items-center space-x-4">
-                <div
-                  class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
+                <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
                   <i data-lucide="brain" class="w-6 h-6 text-white"></i>
                 </div>
                 <div>
@@ -355,10 +341,9 @@
                   <p class="text-slate-400 text-sm">Investigating algorithmic fairness & the black-box problem</p>
                 </div>
               </div>
-              <!-- Interface Poet -->
+              <!-- HCI -->
               <div class="flex items-center space-x-4">
-                <div
-                  class="w-12 h-12 bg-gradient-to-r from-pink-500 to-cyan-600 rounded-lg flex items-center justify-center">
+                <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-cyan-600 rounded-lg flex items-center justify-center">
                   <i data-lucide="layout" class="w-6 h-6 text-white"></i>
                 </div>
                 <div>
@@ -369,7 +354,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -383,34 +367,31 @@
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Viscora Nexus -->
-        <div class="project-card glass p-8 rounded-2xl">
+        <div class="project-card glass p-8 rounded-2xl flex flex-col justify-between">
           <div class="mb-6">
-            <div
-              class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+            <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
               <i data-lucide="network" class="w-8 h-8 text-white"></i>
             </div>
             <h3 class="text-2xl font-bold text-white mb-3">Viscora Nexus</h3>
             <p class="text-slate-400 leading-relaxed">
-              A self-analysis tool and daily diary. Designed to help users map their thoughts and narratives seamlessly through a clean, futuristic UI and features like SWOT analysi (Use to find more).
+              A self-analysis tool and daily diary. Designed to help users map their thoughts and narratives seamlessly through a clean, futuristic UI and features like <span class="text-cyan-400">SWOT analysis</span>.
             </p>
           </div>
-          <div class="flex items-center justify-between">
+          <div class="flex items-center justify-between mt-auto">
             <div class="flex space-x-2">
               <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">PWA</span>
               <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Productivity</span>
             </div>
-            <a href="https://viscora-nexus.vercel.app/" target="_blank"
-              class="text-cyan-400 hover:text-cyan-300 transition-colors">
+            <a href="https://viscora-nexus.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 transition-colors">
               <i data-lucide="external-link" class="w-5 h-5"></i>
             </a>
           </div>
         </div>
 
         <!-- MatSelect -->
-        <div class="project-card glass p-8 rounded-2xl">
+        <div class="project-card glass p-8 rounded-2xl flex flex-col justify-between">
           <div class="mb-6">
-            <div
-              class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-4">
+            <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-4">
               <i data-lucide="layers" class="w-8 h-8 text-white"></i>
             </div>
             <h3 class="text-2xl font-bold text-white mb-3">MatSelect</h3>
@@ -418,45 +399,43 @@
               An industrial steel selection and alloy design tool developed collaboratively with mentors from IIT Ropar, focusing on translating complex material data into an accessible interface.
             </p>
           </div>
-          <div class="flex items-center justify-between">
+          <div class="flex items-center justify-between mt-auto">
             <div class="flex space-x-2">
               <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Full-Stack</span>
               <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-sm">Data</span>
             </div>
-            <a href="https://srijansingh9.github.io/Project-MatSelect-Timeline/" class="text-cyan-400 hover:text-cyan-300 transition-colors">
+            <a href="https://srijansingh9.github.io/Project-MatSelect-Timeline/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 transition-colors">
               <i data-lucide="external-link" class="w-5 h-5"></i>
             </a>
           </div>
         </div>
 
         <!-- 13Safar -->
-        <div class="project-card glass p-8 rounded-2xl">
+        <div class="project-card glass p-8 rounded-2xl flex flex-col justify-between">
           <div class="mb-6">
-            <div
-              class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-4">
+            <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-4">
               <i data-lucide="bus" class="w-8 h-8 text-white"></i>
             </div>
             <h3 class="text-2xl font-bold text-white mb-3">13Safar</h3>
             <p class="text-slate-400 leading-relaxed">
-              A comprehensive viability study and conceptual prototype for a modern bus ticketing and reservation ecosystem, presented at the AICTE Innovation, Design and Entrepreneurship Bootcamp mentored by <a href="https://web.nen.wfglobal.org/en/home">Wadhwani Foundation</a>.
+              A comprehensive viability study and conceptual prototype for a modern bus ticketing and reservation ecosystem, presented at the AICTE IDE Bootcamp mentored by <a href="https://web.nen.wfglobal.org/en/home" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-2 transition-colors">Wadhwani Foundation</a>.
             </p>
           </div>
-          <div class="flex items-center justify-between">
+          <div class="flex items-center justify-between mt-auto">
             <div class="flex space-x-2">
               <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">Concept</span>
               <span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm">Research</span>
             </div>
-            <a href="https://srijansingh9.github.io/13Safar/" class="text-cyan-400 hover:text-cyan-300 transition-colors">
+            <a href="https://srijansingh9.github.io/13Safar/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 transition-colors">
               <i data-lucide="external-link" class="w-5 h-5"></i>
             </a>
           </div>
         </div>
 
         <!-- EdTech Buddy -->
-        <div class="project-card glass p-8 rounded-2xl md:col-span-2 lg:col-span-1">
+        <div class="project-card glass p-8 rounded-2xl md:col-span-2 lg:col-span-1 flex flex-col justify-between">
           <div class="mb-6">
-            <div
-              class="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mb-4">
+            <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mb-4">
               <i data-lucide="graduation-cap" class="w-8 h-8 text-white"></i>
             </div>
             <h3 class="text-2xl font-bold text-white mb-3">EdTech Buddy</h3>
@@ -464,23 +443,21 @@
               An educational companion aiding students in navigating courses and career trajectories through technology and creative insight.
             </p>
           </div>
-          <div class="flex items-center justify-between">
+          <div class="flex items-center justify-between mt-auto">
             <div class="flex space-x-2">
               <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Education</span>
               <span class="px-3 py-1 bg-indigo-500/20 text-indigo-400 rounded-full text-sm">Career</span>
             </div>
-            <a href="https://srijansingh9.github.io/EdTECH-Buddy/" target="_blank"
-              class="text-cyan-400 hover:text-cyan-300 transition-colors">
+            <a href="https://srijansingh9.github.io/EdTECH-Buddy/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 transition-colors">
               <i data-lucide="external-link" class="w-5 h-5"></i>
             </a>
           </div>
         </div>
 
         <!-- More Projects Card -->
-        <div class="project-card glass p-8 rounded-2xl md:col-span-2 lg:col-span-2">
+        <div class="project-card glass p-8 rounded-2xl md:col-span-2 lg:col-span-2 flex flex-col justify-between">
           <div class="mb-6">
-            <div
-              class="w-16 h-16 bg-gradient-to-r from-pink-500 to-violet-600 rounded-xl flex items-center justify-center mb-4">
+            <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-violet-600 rounded-xl flex items-center justify-center mb-4">
               <i data-lucide="folder-git-2" class="w-8 h-8 text-white"></i>
             </div>
             <h3 class="text-2xl font-bold text-white mb-3">System Architecture & Open Source</h3>
@@ -488,13 +465,12 @@
               Explore my complete repository of technical explorations, ranging from optimization algorithms and deep learning concepts to refined UI implementations.
             </p>
           </div>
-          <div class="flex items-center justify-between">
+          <div class="flex items-center justify-between mt-auto">
             <div class="flex space-x-2">
               <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm">Repositories</span>
               <span class="px-3 py-1 bg-violet-500/20 text-violet-400 rounded-full text-sm">Open Source</span>
             </div>
-            <a href="https://github.com/SrijanSingh9?tab=repositories" target="_blank"
-              class="text-cyan-400 hover:text-cyan-300 transition-colors">
+            <a href="https://github.com/SrijanSingh9?tab=repositories" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 transition-colors">
               <i data-lucide="external-link" class="w-5 h-5"></i>
             </a>
           </div>
@@ -512,11 +488,9 @@
 
       <div class="grid md:grid-cols-3 gap-8">
         <!-- GitHub -->
-        <a href="https://github.com/SrijanSingh9" target="_blank"
-          class="glass p-8 rounded-2xl hover:scale-105 transition-all group">
+        <a href="https://github.com/SrijanSingh9" target="_blank" rel="noopener noreferrer" class="glass p-8 rounded-2xl hover:scale-105 transition-all group">
           <div class="text-center">
-            <div
-              class="w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-900 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+            <div class="w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-900 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
               <i data-lucide="github" class="w-10 h-10 text-white"></i>
             </div>
             <h3 class="text-2xl font-bold text-white mb-4">GitHub</h3>
@@ -527,11 +501,9 @@
         </a>
 
         <!-- Instagram -->
-        <a href="https://www.instagram.com/stellar0123456789/" target="_blank"
-          class="glass p-8 rounded-2xl hover:scale-105 transition-all group">
+        <a href="https://www.instagram.com/stellar0123456789/" target="_blank" rel="noopener noreferrer" class="glass p-8 rounded-2xl hover:scale-105 transition-all group">
           <div class="text-center">
-            <div
-              class="w-20 h-20 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+            <div class="w-20 h-20 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
               <i data-lucide="instagram" class="w-10 h-10 text-white"></i>
             </div>
             <h3 class="text-2xl font-bold text-white mb-4">Instagram</h3>
@@ -542,11 +514,9 @@
         </a>
 
         <!-- YouTube -->
-        <a href="https://www.youtube.com/@Stellar0-9" target="_blank"
-          class="glass p-8 rounded-2xl hover:scale-105 transition-all group">
+        <a href="https://www.youtube.com/@Stellar0-9" target="_blank" rel="noopener noreferrer" class="glass p-8 rounded-2xl hover:scale-105 transition-all group">
           <div class="text-center">
-            <div
-              class="w-20 h-20 bg-gradient-to-r from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+            <div class="w-20 h-20 bg-gradient-to-r from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
               <i data-lucide="youtube" class="w-10 h-10 text-white"></i>
             </div>
             <h3 class="text-2xl font-bold text-white mb-4">YouTube</h3>
@@ -570,7 +540,7 @@
       </p>
 
       <div class="flex flex-col sm:flex-row gap-6 justify-center">
-        <a href="https://www.linkedin.com/in/srijan-singh-559258255/" target="_blank"
+        <a href="https://www.linkedin.com/in/srijan-singh-559258255/" target="_blank" rel="noopener noreferrer"
           class="glow-btn bg-gradient-to-r from-cyan-500 to-purple-600 px-8 py-4 rounded-full font-semibold text-white hover:from-cyan-400 hover:to-purple-500 transition-all inline-flex items-center justify-center space-x-2">
           <i data-lucide="linkedin" class="w-5 h-5"></i>
           <span>Connect on LinkedIn</span>
@@ -605,10 +575,12 @@
   </footer>
 
   <script>
-    // Initialize Lucide icons
-    lucide.createIcons();
+    // Robustly initialize Lucide icons after the DOM is fully loaded
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+    });
 
-    // Update year
+    // Update year dynamically
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Scroll progress indicator
@@ -620,6 +592,7 @@
     // Create animated stars
     function createStars() {
       const starsContainer = document.getElementById('stars');
+      if(!starsContainer) return;
       const numStars = 50;
 
       for (let i = 0; i < numStars; i++) {
@@ -634,13 +607,15 @@
       }
     }
 
-    // Mobile menu toggle
+    // Mobile menu toggle logic
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
 
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
+    if(mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
 
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -654,16 +629,18 @@
           });
         }
         // Close mobile menu if open
-        mobileMenu.classList.add('hidden');
+        if(mobileMenu && !mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+        }
       });
     });
 
-    // Initialize on load
+    // Initialize stars on load
     window.addEventListener('load', () => {
       createStars();
     });
 
-    // Add scroll animations
+    // Add scroll animations for quote boxes
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
